@@ -60,6 +60,7 @@ def main():
             print('Finished recording')
 
             # Save the recorded data as a WAV file
+            filename = "recordings/"+filename
             wf = wave.open(filename, 'wb')
             wf.setnchannels(channels)
             wf.setsampwidth(p.get_sample_size(sample_format))
