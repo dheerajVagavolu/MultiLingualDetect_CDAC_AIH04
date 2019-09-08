@@ -13,6 +13,11 @@ Instructions for Running
 
 ** Solve dependencies for torch (official website), Pyqt4 and PyAudio (whl files), librosa and flask (pip install)
 
+conda install -c conda-forge pyaudio
+
+conda install pyqt=4
+
+
 
 2) Run the main.py file "python main.py"
 
