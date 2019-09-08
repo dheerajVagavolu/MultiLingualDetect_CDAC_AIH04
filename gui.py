@@ -1,5 +1,6 @@
 
 import tkinter as tk
+import threading
 import pyaudio
 import time 
 import wave
@@ -28,7 +29,7 @@ def Nmaxelements(list1, N):
 
 def main():
     m=tk.Tk()
-    
+    w = Label(m, text="Yo", width = 25)
 
     def record():
         chunk = 1024  # Record in chunks of 1024 samples
@@ -94,13 +95,20 @@ def main():
             stream.close()
             # Terminate the PortAudio interface
             p.terminate()
-            w = Label(m, text=top_lang_str)
-            w.pack() 
+            w.config(text=top_lang_str+str(k))
+            w.pack()
+             
             m.update()
+        
             
             
 
-    m.title('Counting Seconds') 
-    button = tk.Button(m, text='record', width=25, command=record)
+    m.title('Counting Seconds')
+    m.geometry("500x500")
+
+    button = tk.Button(m, text='record', width=20, command=record)
     button.pack()
+    
+    m.lift()
+    m.attributes("-topmost", True)
     m.mainloop()

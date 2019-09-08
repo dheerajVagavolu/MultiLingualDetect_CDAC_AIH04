@@ -42,6 +42,9 @@ html {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.menu li:hover {
+  background-color: #0099cc;
+}
 
 .aside {
   background-color: #33b5e5;
@@ -49,12 +52,11 @@ html {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
-  height: 200px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .footer {
-  background-color: #33b5e5;
+  background-color: #0099cc;
   color: #ffffff;
   text-align: center;
   font-size: 12px;
@@ -64,33 +66,6 @@ html {
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
-}
-
-.button {
-    
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button2 {background-color: #33b5e5;} /* Blue */
-
-.button2:hover{
-    background-color: #2dcbff;
-}
-
-.i_form{
-    
-    border: #9933cc solid 0.5mm;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    padding: 20px;
-    padding-left: 10%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -127,50 +102,41 @@ html {
 </head>
 <body>
 
-<div class="header" style="text-align: center">
-  <h1>AIH19T-0161</h1>
+<div class="header">
+  <h1>Chania</h1>
 </div>
 
 <div class="row">
-        <div class="col-3 col-s-12">
-        <div class="aside">
-            
-                <p>
-                      {% with messages = get_flashed_messages() %}
-                      {% if messages %}
-                      <h3>Top Picks</h3>
-                          <ul class=flashes style="list-style-type: none; text-align: left;">
-                          {% for message in messages %}
-                          <li>{{ message }}</li><br>
-                          {% endfor %}
-                          </ul>
-                      {% endif %}
-                      {% endwith %}
-                  </p>
-              </div>
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li>NK</li>
+      <li>DJ</li>
+      <li>SG</li>
+      <li>KC</li>
+      <li>KV</li>
+    </ul>
   </div>
 
   <div class="col-6 col-s-9">
         <div class="i_form">
-                <h2>Offline Model</h2>
                 <form method="post" action="/" enctype="multipart/form-data">
                     <dl>
                         <p>
                                 
-                                    <input type="file" name="file" autocomplete="off" required>
+                                    <input class="fileInput" type="file" name="file" autocomplete="off" required>
                                 
                                     
                         </p>
                     </dl>
                     <p>
-                        <input class="button button2" type="submit" value="Submit">
+                        <input type="submit" value="Submit">
                     </p>
                 </form>
-                <h2>Online Model</h2>
+                <h3>Record Online Model</h3>
                 <form action="/server" method="POST">
                     
                     <p>
-                        <input class="button button2" type="submit" value="Start">
+                        <input type="submit" value="Start">
                     </p>
             
                 </form>
@@ -178,23 +144,26 @@ html {
                 </div>
   </div>
 
- 
-        <div class="col-3 col-s-3 menu" style="text-align: center;">
-
-
-    <h2>Creators</h2>
-    <ul>
-      <li>Nandha</li>
-      <li>Dheeraj</li>
-      <li>Gowtham</li>
-      <li>Karthik</li>
-      <li>Ketan</li>
-    </ul>
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>Predictions</h2>
+      <p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+        </p>
+    </div>
   </div>
 </div>
 
 <div class="footer">
-  <p>For queries contact _______ or _______.</p>
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
 </div>
 
 </body>
