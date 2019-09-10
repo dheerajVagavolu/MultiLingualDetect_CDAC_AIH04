@@ -11,7 +11,7 @@ import numpy as np
 import gui
 ALLOWED_EXTENSIONS = set(['wav','mp3'])
 model = CRNN.CRNN()
-model.load_state_dict(torch.load("weights/TrialRunWeights.pth"))
+model.load_state_dict(torch.load("weights/TrialRunWeights.pth", map_location='cpu'))
     
 lang_list = ["TAMIL", "GUJARATI", "MARATHI", "HINDI", "TELUGU"]
 

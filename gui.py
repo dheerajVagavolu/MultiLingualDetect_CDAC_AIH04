@@ -9,7 +9,7 @@ from tkinter import *
 import CRNN
 import torch
 model = CRNN.CRNN()
-model.load_state_dict(torch.load("weights/TrialRunWeights.pth"))
+model.load_state_dict(torch.load("weights/TrialRunWeights.pth", map_location = 'cpu'))
 
 lang_list = ["TAMIL", "GUJARATI", "MARATHI", "HINDI", "TELUGU"]
 
