@@ -24,7 +24,11 @@ def dataprepocess(imgSrc):
     for i in range(int(noFrames)):    
         melspec=librosa.feature.melspectrogram(
                 audio[i*sampling:(i+dur-1)*sampling], sr = samples, n_mels = 129, 
-                fmax = 5000, n_fft = 1600, hop_length = 320)
+                fmax = 5000, n_fft = 1600, hop_length = 128)
+        melspec=librosa.power_to_db(melspec,ref=np.max)
+        melspec-=np.min(melspec)
+        melspec=melspec/np.max(melspec)
+        frames.append(melspec)
         
     
     framesArray = np.array(frames)
