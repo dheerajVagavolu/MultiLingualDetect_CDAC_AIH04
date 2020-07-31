@@ -1,3 +1,10 @@
+0. Authors:
+Ketan V.
+Nanda K.
+S. Gowtham
+Karthik C.
+Dheeraj V.
+
 I. <Basic introduction to the project> copy from slides.
 
 II. File Structure:
