@@ -41,7 +41,7 @@ mccabe==0.6.1
 nltk==3.4.3
 numba==0.45.1
 numpy==1.16.4
-opencv-python==4.1.0.25
+opencv-python==4.2.0.32
 pandas==0.25.0
 parsel==1.5.1
 Pillow==6.1.0
