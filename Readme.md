@@ -1,13 +1,14 @@
-## 0. Authors:
+### Authors:
+```
 Ketan V.,
 Nanda K.,
 S. Gowtham,
 Karthik C.,
 Dheeraj V.,
-
+```
 ## I. Spoken Language Identification
 ### Project Description
-```
+
 This project, developed for the NVIDIA AI Hackathon 2019, is a real-time spoken language identification system for diverse Indian languages. Built using Python and Flask for the web interface, it uses a Convolutional Recurrent Neural Network (CRNN) for language detection.
 
 We tackled a unique challenge of identifying and transitioning between multiple Indian languages in real-time during a conversation. This hands-free multilingual conversation facilitator provides an impressive and practical solution to language barriers, particularly in a linguistically diverse nation like India.
@@ -15,7 +16,7 @@ We tackled a unique challenge of identifying and transitioning between multiple 
 The project stands as a testament to our team's innovative problem-solving abilities, as we effectively addressed a significant data scarcity issue. We conducted on-the-spot interviews to collect live language samples, thereby creating a dataset that enhanced the performance of our language detection model.
 
 This innovative solution earned us the 3rd position at the NVIDIA AI Hackathon 2019.
-```
+
 ### Features
 ```
 Real-time spoken language identification for diverse Indian languages
