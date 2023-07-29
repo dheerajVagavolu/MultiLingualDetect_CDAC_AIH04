@@ -1,13 +1,35 @@
-0. Authors:
+## 0. Authors:
 Ketan V.
 Nanda K.
 S. Gowtham
 Karthik C.
 Dheeraj V.
 
-I. <Basic introduction to the project> copy from slides.
+## I. Spoken Language Identification
+### Project Description
+This project, developed for the NVIDIA AI Hackathon 2019, is a real-time spoken language identification system for diverse Indian languages. Built using Python and Flask for the web interface, it uses a Convolutional Recurrent Neural Network (CRNN) for language detection.
 
-II. File Structure:
+We tackled a unique challenge of identifying and transitioning between multiple Indian languages in real-time during a conversation. This hands-free multilingual conversation facilitator provides an impressive and practical solution to language barriers, particularly in a linguistically diverse nation like India.
+
+The project stands as a testament to our team's innovative problem-solving abilities, as we effectively addressed a significant data scarcity issue. We conducted on-the-spot interviews to collect live language samples, thereby creating a dataset that enhanced the performance of our language detection model.
+
+This innovative solution earned us the 3rd position at the NVIDIA AI Hackathon 2019.
+
+### Features
+Real-time spoken language identification for diverse Indian languages
+Live audio capture and analysis
+Quick language transition (within 1.5 seconds)
+Hands-free multilingual conversations
+
+###Technologies Used
+Python
+Flask
+Convolutional Recurrent Neural Network (CRNN)
+
+###Acknowledgements
+We're grateful to everyone who contributed to this project and those who provided language samples. This project wouldn't have been possible without the NVIDIA AI Hackathon 2019 platform, which gave us the opportunity to solve a unique and challenging problem..
+
+## II. File Structure:
 
     AIH19T-0161
     |-- README.txt
@@ -83,20 +105,22 @@ II. File Structure:
     |-- |-- |-- 
     |-- |-- |-- 
 
-III. Installing the dependencies:
+## III. Installing the dependencies:
     
     Install the requirements using the command*:
+```
         pip3 install -r requirements.txt
 	conda install -c conda-forge pyaudio         // Try installing them with pip3 we got error so we installed using conda
 	conda install pyqt4
 	pip3 install flask
 	pip3 install librosa
+```
 
     We got many permission issues:
 	So we had to create a new conda env and install everything using conda.
 	We hope the person who is checking will have all permissions in the system and could install all dependencies.
 
-IV. Running the Web-App:
+## IV. Running the Web-App:
     P.S. The cluster didn't have a display environment and hence couldn't load the web application. Ensure that the web app is run on a system with a proper graphics interface.
     To run the web appliation go to ./UI/ folder and run the following command:
 	module load python3.6
@@ -108,7 +132,7 @@ IV. Running the Web-App:
 	1) For offline, click on browse to select the audio file only in the .wav format, click submit then the top three languages are shown in the left.
 	2) For online, click on online option , you will be redirected to popup 'python gui' click on record option it will display the latest languages in the front.
 
-V. Reproducing the models:
+## V. Reproducing the models:
 
     All the preprocessing, Training, Testing and Hyper parameter tuning will be done inside AIH19T-0161/Model folder.
 
@@ -172,7 +196,7 @@ V. Reproducing the models:
         This prints and stores F1 score and confusion matrix between the predicted and the ground truth value in a separate file 'tuneTest30.txt'.
 
 
-Dependencies
+## Dependencies
 -----------------------------------------
 
 All the dependencies are packaged into requirements.txt file.
